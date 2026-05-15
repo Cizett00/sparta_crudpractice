@@ -8,13 +8,13 @@ import java.time.LocalDate;
 
 @Getter
 public class OrderResponseDto {
-    private Long id;
-    private LocalDate orderdate;
-    private String productName;
-
-    public OrderResponseDto(Order entity) {
-        this.id = entity.getId();
-        this.orderdate = entity.getOrderdate();
-        this.productName = entity.getProduct().getName();
-    }
+//    private Long id;
+//    private LocalDate orderdate;
+//    private String productName;
+//
+//    public OrderResponseDto(Order entity) {
+//        this.id = entity.getId();
+//        this.orderdate = entity.getOrderdate();
+//        this.productName = entity.getProduct().getName();
+//    }
 }

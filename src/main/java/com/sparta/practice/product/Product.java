@@ -1,17 +1,17 @@
-package com.sparta.practice.product;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor
-@Entity
-public class Product {
+//package com.sparta.practice.product;
+//
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.GeneratedValue;
+//import jakarta.persistence.GenerationType;
+//import jakarta.persistence.Id;
+//import lombok.Builder;
+//import lombok.Getter;
+//import lombok.NoArgsConstructor;
+//
+//@Getter
+//@NoArgsConstructor
+//@Entity
+//public class Product {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -30,4 +30,4 @@ public class Product {
         this.price = price;
     }
 
-}
+//}
