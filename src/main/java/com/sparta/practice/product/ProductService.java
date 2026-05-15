@@ -12,7 +12,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class ProductService {
-    //테스트용 주석
+    //상품 CRUD 구현
 
 
     private final ProductRepository productRepository;
