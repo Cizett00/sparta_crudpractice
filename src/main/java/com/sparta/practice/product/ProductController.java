@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 public class ProductController {
+    //테스트용 주석
 
     private final ProductService productService;
 

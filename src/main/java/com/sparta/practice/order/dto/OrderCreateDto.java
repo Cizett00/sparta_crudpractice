@@ -10,6 +10,8 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 public class OrderCreateDto {
+    //테스트용 주석
+
     private LocalDate orderdate;
     private Long productId;
 

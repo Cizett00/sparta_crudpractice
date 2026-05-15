@@ -22,6 +22,7 @@ public class Order {
     private Long id;
     private LocalDate orderdate;
 
+    //상품 id를 주문정보 안에 넣어 상품 이름이 바뀔때 주문정보에서도 수정되도록 함
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;

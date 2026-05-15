@@ -5,6 +5,8 @@ import lombok.Getter;
 
 @Getter
 public class ProductResponseDto {
+    //테스트용 주석
+
     private Long id;
     private String name;
     private int price;
