@@ -16,12 +16,14 @@ import java.time.LocalDate;
 @Table(name = "orders") //DB문제를 피하기 위해 orders로 테이블 저장
 public class Order {
 
+    //주문 테이블
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
     private LocalDate orderdate;
 
+    //상품 id를 주문정보 안에 넣어 상품 이름이 바뀔때 주문정보에서도 수정되도록 함
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;

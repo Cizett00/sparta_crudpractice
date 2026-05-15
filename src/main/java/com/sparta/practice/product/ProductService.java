@@ -12,14 +12,18 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class ProductService {
+    //상품 CRUD 구현
+
 
     private final ProductRepository productRepository;
 
+    //상품저장
     @Transactional
     public Long save(ProductCreateDto productCreateDto){
         return productRepository.save(productCreateDto.toEntity()).getId();
     }
 
+    //상품수정
     @Transactional
     public Long update(Long id, ProductUpdateDto productUpdateDto){
         Product product = productRepository.findById(id)
@@ -28,12 +32,14 @@ public class ProductService {
         return id;
     }
 
+    //상품 검색
     public ProductResponseDto findById(Long id) {
         Product entity = productRepository.findById(id)
                 .orElseThrow(()-> new IllegalArgumentException("product doesn't exist"));
         return new ProductResponseDto(entity);
     }
 
+    //상품 삭제
     @Transactional
     public void delete(Long id){
         Product product = productRepository.findById(id)

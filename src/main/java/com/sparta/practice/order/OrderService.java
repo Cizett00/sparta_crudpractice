@@ -13,10 +13,12 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class OrderService {
+    //주문 생성 및 조회
 
     private final ProductRepository productRepository;
     private final OrderRepository orderRepository;
 
+    //주문 저장
     @Transactional
     public Long save(OrderCreateDto orderCreateDto){
         Product product = productRepository.findById(orderCreateDto.getProductId())
@@ -27,6 +29,7 @@ public class OrderService {
         return orderRepository.save(order).getId();
     }
 
+    //주문 조회
     public OrderResponseDto findById(Long id) {
         Order entity = orderRepository.findById(id)
                 .orElseThrow(()-> new IllegalArgumentException("order doesn't exist"));

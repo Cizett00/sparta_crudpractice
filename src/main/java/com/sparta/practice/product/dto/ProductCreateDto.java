@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class ProductCreateDto {
+    //테스트용 주석
+
 //    private Long id;
     private String name;
     private int price;

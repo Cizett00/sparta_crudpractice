@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Product {
+    //상품 테이블
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
