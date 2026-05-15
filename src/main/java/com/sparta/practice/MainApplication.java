@@ -12,6 +12,5 @@ public class MainApplication {
 		SpringApplication.run(MainApplication.class, args);
 	}
 
-
-	//테스트용 주석
+	//리뷰 브랜치에 올라갈 주석테스트 2번째
 }
