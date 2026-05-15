@@ -13,7 +13,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class OrderService {
-    //테스트용 주석
+    //주문 생성 및 조회
 
     private final ProductRepository productRepository;
     private final OrderRepository orderRepository;
