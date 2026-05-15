@@ -16,6 +16,7 @@ import java.time.LocalDate;
 @Table(name = "orders") //DB문제를 피하기 위해 orders로 테이블 저장
 public class Order {
 
+    //주문 테이블
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
