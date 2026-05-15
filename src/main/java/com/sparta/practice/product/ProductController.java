@@ -9,28 +9,28 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 public class ProductController {
-//
-//    private final ProductService productService;
-//
-//    @PostMapping("/product/save")
-//    public Long save(@RequestBody ProductCreateDto productCreateDto){
-//        return productService.save(productCreateDto);
-//    }
-//
-//    @PutMapping("/product/update/{id}")
-//    public Long update(@PathVariable Long id, @RequestBody ProductUpdateDto productUpdateDto){
-//        return productService.update(id, productUpdateDto);
-//    }
-//
-//    @GetMapping("/product/get/{id}")
-//    public ProductResponseDto findById(@PathVariable Long id){
-//        return productService.findById(id);
-//    }
-//
-//    @DeleteMapping("/product/delete/{id}")
-//    public void deleteProduct(@PathVariable Long id){
-//        productService.delete(id);
-//
-//        return;
-//    }
+
+    private final ProductService productService;
+
+    @PostMapping("/product/save")
+    public Long save(@RequestBody ProductCreateDto productCreateDto){
+        return productService.save(productCreateDto);
+    }
+
+    @PutMapping("/product/update/{id}")
+    public Long update(@PathVariable Long id, @RequestBody ProductUpdateDto productUpdateDto){
+        return productService.update(id, productUpdateDto);
+    }
+
+    @GetMapping("/product/get/{id}")
+    public ProductResponseDto findById(@PathVariable Long id){
+        return productService.findById(id);
+    }
+
+    @DeleteMapping("/product/delete/{id}")
+    public void deleteProduct(@PathVariable Long id){
+        productService.delete(id);
+
+        return;
+    }
 }

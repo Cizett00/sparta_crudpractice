@@ -10,10 +10,10 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 public class OrderCreateDto {
-//    private LocalDate orderdate;
-//    private Long productId;
-//
-//    public Long getProductId() {
-//        return productId;
-//    }
+    private LocalDate orderdate;
+    private Long productId;
+
+    public Long getProductId() {
+        return productId;
+    }
 }

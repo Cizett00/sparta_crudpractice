@@ -13,23 +13,23 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class OrderService {
-//
-//    private final ProductRepository productRepository;
-//    private final OrderRepository orderRepository;
-//
-//    @Transactional
-//    public Long save(OrderCreateDto orderCreateDto){
-//        Product product = productRepository.findById(orderCreateDto.getProductId())
-//                .orElseThrow(() -> new IllegalArgumentException("product doesn't exist"));
-//
-//        Order order = new Order(product, orderCreateDto.getOrderdate());
-//
-//        return orderRepository.save(order).getId();
-//    }
-//
-//    public OrderResponseDto findById(Long id) {
-//        Order entity = orderRepository.findById(id)
-//                .orElseThrow(()-> new IllegalArgumentException("order doesn't exist"));
-//        return new OrderResponseDto(entity);
-//    }
+
+    private final ProductRepository productRepository;
+    private final OrderRepository orderRepository;
+
+    @Transactional
+    public Long save(OrderCreateDto orderCreateDto){
+        Product product = productRepository.findById(orderCreateDto.getProductId())
+                .orElseThrow(() -> new IllegalArgumentException("product doesn't exist"));
+
+        Order order = new Order(product, orderCreateDto.getOrderdate());
+
+        return orderRepository.save(order).getId();
+    }
+
+    public OrderResponseDto findById(Long id) {
+        Order entity = orderRepository.findById(id)
+                .orElseThrow(()-> new IllegalArgumentException("order doesn't exist"));
+        return new OrderResponseDto(entity);
+    }
 }

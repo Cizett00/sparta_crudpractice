@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class OrderController {
 
-//    private final OrderService orderService;
-//
-//    @PostMapping("/order/save")
-//    public Long save(@RequestBody OrderCreateDto orderCreateDto){
-//        return orderService.save(orderCreateDto);
-//    }
-//
-//    @GetMapping("/order/get/{id}")
-//    public OrderResponseDto findById(@PathVariable Long id){
-//        return orderService.findById(id);
-//    }
+    private final OrderService orderService;
+
+    @PostMapping("/order/save")
+    public Long save(@RequestBody OrderCreateDto orderCreateDto){
+        return orderService.save(orderCreateDto);
+    }
+
+    @GetMapping("/order/get/{id}")
+    public OrderResponseDto findById(@PathVariable Long id){
+        return orderService.findById(id);
+    }
 
 }
